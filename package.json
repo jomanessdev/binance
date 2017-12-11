@@ -1,0 +1,27 @@
+{
+  "name": "binance",
+  "version": "1.0.0",
+  "description": "Something to test binance API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc -p ./server && cp ./config/serviceAccountKey.json ./dist && rm -rf ./dist/public && cp -rf ./ui ./dist/public && node ./dist/server.js",
+    "install": "cd ./ui && bower install"
+  },
+  "author": "Jordan Maness",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "firebase": "^4.8.0",
+    "firebase-admin": "^5.5.1",
+    "path": "^0.12.7",
+    "ws": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.39",
+    "@types/ws": "^3.2.1",
+    "typescript": "^2.6.2"
+  }
+}

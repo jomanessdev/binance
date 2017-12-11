@@ -1,0 +1,4 @@
+dist/
+node_modules/
+config/serviceAccountKey.json
+ui/bower_components

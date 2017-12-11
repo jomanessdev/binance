@@ -1,0 +1,21 @@
+{
+  "name": "ui",
+  "authors": [
+    "jomaness <jomaness@cisco.com>"
+  ],
+  "description": "front-end for binance",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chartist": "^0.11.0"
+  }
+}
