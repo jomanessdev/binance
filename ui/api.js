@@ -4,6 +4,7 @@ var _series = [];
 var _subSeries = [];
 
 var serverUrl = `http://${window.location.hostname}/services`;
+console.log(serverUrl);
 
 var lineChart = new Chartist.Line('#chart1', {
   labels: _labels,
