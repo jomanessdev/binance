@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc -p ./server && cp ./config/serviceAccountKey.json ./dist && rm -rf ./dist/public && cp -rf ./ui ./dist/public && node ./dist/server.js",
-    "install": "cd ./ui && bower install"
+    "install": "npm install -g bower && cd ./ui && bower install"
   },
   "author": "Jordan Maness",
   "license": "ISC",
