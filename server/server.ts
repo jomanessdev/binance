@@ -2,6 +2,8 @@ import * as WebSocket from 'ws';
 import { FireBaseController } from './controllers/firebase'
 import { error } from 'util';
 
+var os = require('os');
+
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -57,7 +59,7 @@ const express = require('express');
 
 var app = express();
 
-app.use(cors({origin: 'http://localhost:3000'}));
+app.use(cors({origin: `http://${os.hostname()}:3000`}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 

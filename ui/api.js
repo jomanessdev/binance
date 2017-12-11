@@ -3,8 +3,8 @@ var _labels = [];
 var _series = [];
 var _subSeries = [];
 
-// var serverUrl = `http://${window.location.hostname}/services`;
-var serverUrl = `http://localhost:3000/services`;
+var serverUrl = `http://${window.location.hostname}:3000/services`;
+// var serverUrl = `http://localhost:3000/services`;
 
 
 var lineChart = new Chartist.Line('#chart1', {
