@@ -8,9 +8,6 @@ var serverUrl = 'http://localhost:3000/services'
 var lineChart = new Chartist.Line('#chart1', {
   labels: _labels,
   series: _series
-}, {
-  low: 0,
-  showArea: true
 });
 
 var barChart = new Chartist.Bar('#chart2', {
@@ -45,9 +42,10 @@ function refresh(){
 
            _labels = jsonResp.labels;
            _series = jsonResp.series;
+           _low = jsonResp.low;
 
-           lineChart.update({series: _series, labels: _labels});
-           barChart.update({series: _series, labels: _labels});
+           lineChart.update({series: _series, labels: _labels},{low: _low, showArea: true, showLine:true, showPoint:true});
+           barChart.update({series: _series, labels: _labels},{low: _low});
         }
     };
     xmlhttp.open("GET", serverUrl+'/binance/all', true);

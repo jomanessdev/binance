@@ -75,7 +75,7 @@ export class FireBaseController {
               return false;
             });    
             _series.push(_subSeries);
-            resolve({series: _series, labels: _labels});
+            resolve({series: _series, labels: _labels, low: Math.min(_subSeries)});
           }).catch((err) => { 
             reject({success: false})
         });
