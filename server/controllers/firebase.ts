@@ -50,12 +50,18 @@ export class FireBaseController {
                 }
 
                 _labels.push(hour+':'+newMinute);
-                _subSeries.push(Math.floor(childData.content.w));
+
+                 if(Math.floor(childData.content.w) < 1){
+                    _subSeries.push(parseFloat(childData.content.w).toFixed(6));
+                    // console.log(parseFloat(childData.content.w));
+                 }else{
+                    _subSeries.push(Math.floor(childData.content.w));
+                 }
 
                 return false;
             });    
             _series.push(_subSeries);
-            resolve({series: _series, labels: _labels, low: Math.min(_subSeries)});
+            resolve({series: _series, labels: _labels, low: Math.min.apply(null,_subSeries)});
           }).catch((err) => { 
             reject({success: false})
         });
@@ -92,13 +98,19 @@ export class FireBaseController {
                         newMinute = minute.toString();
                     }
                     _labels.push(hour+':'+newMinute);
-                    _subSeries.push(Math.floor(childData.content.w));
+                    if(Math.floor(childData.content.w) < 1){
+                        _subSeries.push(parseFloat(childData.content.w).toFixed(6));
+                        // console.log(parseFloat(childData.content.w));
+                     }else{
+                        _subSeries.push(Math.floor(childData.content.w));
+                     }
+    
                 }
 
                 return false;
             });    
             _series.push(_subSeries);
-            resolve({series: _series, labels: _labels, low: Math.min(_subSeries)});
+            resolve({series: _series, labels: _labels, low: Math.min.apply(null,_subSeries)});
           }).catch((err) => { 
             reject({success: false})
         });
