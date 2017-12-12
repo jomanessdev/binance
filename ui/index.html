@@ -6,11 +6,15 @@
   </head>
   <body>
     <h1>Crypto</h1>
-    <button type="button" onclick="refreshBtc(); refreshLtc()">Refresh</button>
+    <label for="limitInput">Limit</label>
+    <input type="number" id="limitInput"/>
+    <button type="button" onclick="refreshAll()">Refresh</button>    
     <h3>Bitcoin</h3>
     <div class="ct-chart ct-golden-section" id="chart1"></div>
     <h3 style="margin-top:100px">Litecoin</h3>
     <div class="ct-chart ct-golden-section" id="chart2"></div>
+    <h3 style="margin-top:100px">Iota</h3>
+    <div class="ct-chart ct-golden-section" id="chart3"></div>
     <script src="bower_components/chartist/dist/chartist.min.js"></script>    
     <script src="api.js"></script>
   </body>

@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc -p ./server && cp ./config/serviceAccountKey.json ./dist && rm -rf ./dist/public && cp -rf ./ui ./dist/public && node ./dist/server.js",
+    "start": "tsc -p ./server && cp ./config/*.json ./dist && rm -rf ./dist/public && cp -rf ./ui ./dist/public && cp ./config/env.json ./dist/public && node ./dist/server.js",
     "install": "cd ./ui && bower install"
   },
   "author": "Jordan Maness",
