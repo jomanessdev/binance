@@ -77,7 +77,7 @@ ltcwss.on('open', function open(){
     console.log('WSS', `Connected to ${litecoinBinanceStream}`);
 
     //connection is up, let's add a simple simple event
-    btcwss.on('message', function incoming(message) {
+    ltcwss.on('message', function incoming(message) {
 
         // console.log(`WS ${Date.now()} - received: %s`);         
 

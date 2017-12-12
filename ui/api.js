@@ -85,7 +85,6 @@ function refreshBtc(limit){
         xmlhttp.open("GET", serverUrl+'/binance/btc', true);        
     }
     xmlhttp.send();
-
 }
 
 
