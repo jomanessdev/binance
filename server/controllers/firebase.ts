@@ -62,7 +62,7 @@ export class FireBaseController {
       
               var nowHour = new Date().getHours();
               
-              if(hour > nowHour - 5 && minute%15==0){
+              if(hour > nowHour - 3 && minute%30==0){
                 if(minute.toString().length < 2){
                   newMinute = '0'+minute.toString();
                 }else{
